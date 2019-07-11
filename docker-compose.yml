@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  php:
+    image: php:7.1-cli
+    working_dir: /var/www
+    volumes:
+      - ${PWD}:/var/www
+    command: bash -c 'while true; do sleep 60; done'
+  composer:
+    image: composer
+    working_dir: /var/www
+    volumes:
+      - ${PWD}:/var/www
+    command: bash -c 'while true; do sleep 60; done'
